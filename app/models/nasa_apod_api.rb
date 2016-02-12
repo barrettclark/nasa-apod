@@ -6,6 +6,4 @@ class NasaApodApi
     JSON.parse(nasa_info)
   end
 
-
-
 end
