@@ -1,2 +1,8 @@
-<h1>NasaPictures#index</h1>
-<p>Find me in app/views/nasa_pictures/index.html.erb</p>
+<h1><%= @nasa_info["title"] %></h1>
+<p><% if @url_type_is_youtube %>
+	<iframe id="video" src="<%= @nasa_info["url"] %>"></iframe>
+	<% else %>
+	<img id="picture" src="<%= @nasa_info["url"] %>" />
+	<% end %>
+
+</p>
