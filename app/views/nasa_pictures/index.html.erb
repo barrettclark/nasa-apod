@@ -1,8 +1,24 @@
-<h1><%= @nasa_info["title"] %></h1>
-<p><% if @url_type_is_youtube %>
-	<iframe id="video" src="<%= @nasa_info["url"] %>"></iframe>
-	<% else %>
-	<img id="picture" src="<%= @nasa_info["url"] %>" />
+<div id="title">
+	<h1 class="nasaTitle">"<%= @nasa_info["title"] %>"</h1>
+	<br />
+	<% if @media_type_is_video %>
+		<h2 class="nasaSubtitle"> NASA Video of the Day</h2>
+		<% else %>
+		<h2 class="nasaSubtitle"> NASA Photo of the Day</h2>
 	<% end %>
+</div>
+<div id="media">
+	<% if @media_type_is_video %>
+		<iframe id="video" src="<%= @nasa_info["url"] %>"></iframe>
+		<% else %>
+		<img id="picture" src="<%= @nasa_info["url"] %>" />
+	<% end %>
+</div>
+<div id="summary">
+	<div id="clickToOpen"><<</div>
+	<div id="summaryAndDate">
+	<p><%= @nasa_info["explanation"] %></p>
+	<p id="date"><%= @nasa_info["date"] %></p>
+	</div>
+</div>
 
-</p>
