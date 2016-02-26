@@ -1,11 +1,13 @@
 <div id="title">
 	<h1 class="nasaTitle">"<%= @nasa_info["title"] %>"</h1>
 	<br />
+	<h2 class="nasaSubtitle">
 	<% if @media_type_is_video %>
-		<h2 class="nasaSubtitle"> NASA Video of the Day</h2>
+		 NASA Video of the Day
 		<% else %>
-		<h2 class="nasaSubtitle"> NASA Photo of the Day</h2>
+		 NASA Photo of the Day
 	<% end %>
+	</h2>
 </div>
 <div id="media">
 	<% if @media_type_is_video %>

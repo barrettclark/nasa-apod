@@ -15,4 +15,5 @@
 # Floobits files
 .floo*
 
+#Environment Variables
 .env
