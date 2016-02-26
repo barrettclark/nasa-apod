@@ -16,6 +16,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   */
+  overflow-x: hidden;
 	
 }
 #video {
@@ -84,10 +85,10 @@ div#summary {
 	width: 45%;
 	height: auto;
 
+	
 	position: absolute;
-	top: 65%;
+	top: calc(100% - 50px);
 	left: 54%;
-
 
 
 	p {
