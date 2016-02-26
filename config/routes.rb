@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'nasa_pictures#index'
+  get 'nasa_pictures/index(/:date)' => 'nasa_pictures#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
