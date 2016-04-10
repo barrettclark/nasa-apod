@@ -1,5 +1,7 @@
 @import "normalize";
 
+$yellow: rgba(255,255,0,1);
+
 body {
 	color: black;
 	background-color: black;
@@ -11,6 +13,11 @@ body {
 
 .clear {
 	clear:both;
+}
+
+div#media {
+	width: 100vw;
+	height: auto;
 }
 
 #video {
@@ -39,7 +46,7 @@ div#title {
 	font-weight: 700;
 
 	h1 {
-		background-color: rgba(255,255,0,1);
+		background-color: $yellow;
 		padding: 10px;
 		display: inline-block;
 		margin: -4px;
@@ -58,12 +65,11 @@ div#title {
 	align-items:flex-end;
 	height: 100vh;
 	overflow: hidden;
+	background-color: $yellow;
 }
 
 div#summary {
 	@extend #title;
-
-	background-color: rgba(255,255,0,1);
 	padding: 15px;
 	text-align: justify;
 
@@ -104,16 +110,16 @@ div#summaryAndDate {
 	}
 
 
-@media screen and (min-width: 300px) and (max-width: 800px){
-	#picture, #video, div#summary, div#title, 
-	#summaryWrapper, div#title h1, div#title h2, 
+@media (max-width: 800px) {
+	#picture, iframe#video, div#summary, div#title, 
+	div#summaryWrapper, div#title h1, div#title h2, 
 	div#summary #date, div#summaryAndDate {
 		position: static;
 		z-index: 1;
 		display: block;
+		min-width: 280px;
+		min-height: 0px;
 		width: 100%;
-		min-height: auto;
-		min-width: auto;
 		height: auto;
 		margin: 0px;
 		text-align: center;
@@ -137,8 +143,11 @@ div#summaryAndDate {
 	}
 
 	div#summary {
-		justify-content: center;
-		flex-wrap: wrap;
+		padding: 0 0 20px 0;
+
+		#date {
+			padding: 0px;
+		}
 	}
 
 
