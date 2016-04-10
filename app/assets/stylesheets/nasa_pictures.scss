@@ -104,7 +104,7 @@ div#summaryAndDate {
 	}
 
 
-@media (max-width: 800px){
+@media screen and (min-width: 300px) and (max-width: 800px){
 	#picture, #video, div#summary, div#title, 
 	#summaryWrapper, div#title h1, div#title h2, 
 	div#summary #date, div#summaryAndDate {
