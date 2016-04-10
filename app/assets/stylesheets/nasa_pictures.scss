@@ -2,6 +2,11 @@
 
 $yellow: rgba(255,255,0,1);
 
+html, body {
+	display: block;
+	height: 100%;
+}
+
 body {
 	color: black;
 	background-color: black;
@@ -59,17 +64,18 @@ div#title {
 	
 }
 
-#summaryWrapper {
+div#summaryWrapper {
 	display: flex;
 	justify-content: flex-end;
 	align-items:flex-end;
 	height: 100vh;
 	overflow: hidden;
-	background-color: $yellow;
+
 }
 
 div#summary {
 	@extend #title;
+	background-color: $yellow;
 	padding: 15px;
 	text-align: justify;
 
@@ -108,6 +114,13 @@ div#summaryAndDate {
 		height: auto; 
 
 	}
+
+div#showInfo {
+	background-color: $yellow;
+	padding: 15px;
+	display: none;
+}
+
 
 
 @media (max-width: 800px) {

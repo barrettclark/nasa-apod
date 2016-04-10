@@ -17,14 +17,17 @@
 	<% end %>
 	<br class="clear">
 </div>
-	<div id="summaryWrapper">
-		<div id="summary">
-			<div id="clickToOpen">&lt;&lt;</div>
-			<div id="summaryAndDate">
-			<p><%= @nasa_info["explanation"] %></p>
-			<p id="date"><%= @nasa_info["date"] %></p>
-			<br class="clear">
-			</div>
+<div id="summaryWrapper">
+	<div id="summary">
+		<div id="clickToOpen">>></div>
+		<div id="summaryAndDate">
+		<p><%= @nasa_info["explanation"] %></p>
+		<p id="date"><%= @nasa_info["date"] %></p>
+		<br class="clear">
 		</div>
 	</div>
+	<div id="showInfo">
+		<h2><< Show Info</h2>
+	</div>
+</div>
 
