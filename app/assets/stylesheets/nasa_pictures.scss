@@ -1,49 +1,30 @@
-// Place all the styles related to the NasaPictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-
 body {
 	color: black;
+	background-color: black;
 	font-family: 'Lora', serif;
 	text-transform: uppercase;
 	font-style: italic;
-	/* This doesn't work ?? find out why
-	background: url(<%= @nasa_url %>) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  */
   overflow-x: hidden;
-	
 }
+
+.clear {
+	clear:both;
+}
+
 #video {
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 800px;
-	z-index: -1;
-	
-}
-
-div#media{
-	width: 100%;
-	height: 100%;
+	min-height: 800px;
+	min-width: 800px;
+	z-index: 1;
 }
 
 #picture {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-  z-index: -1;
-
+	@extend #video;
+	z-index: -1;
+	min-height: auto;
 }
 
 
@@ -59,7 +40,7 @@ div#title {
 		background-color: rgba(255,255,0,1);
 		padding: 10px;
 		display: inline-block;
-		margin: -9px;
+		margin: -4px;
 	}
 
 	h2 {
@@ -69,30 +50,30 @@ div#title {
 	
 }
 
+#summaryWrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items:flex-end;
+	height: 100vh;
+	overflow: hidden;
+}
+
 div#summary {
 	@extend #title;
 
 	background-color: rgba(255,255,0,1);
-	padding: 10px;
+	padding: 15px;
 	text-align: justify;
 
 	display: flex;
-	flex-direction: row;
-	flex-wrap: no-wrap;
+	flex-flow: row nowrap;
 	justify-content: flex-start;
-	flex-align: stretch;
 	align-items: center;
 
 	text-transform: none;
 	font-weight: 400;
 	width: 45%;
 	height: auto;
-
-	
-	position: absolute;
-	top: calc(100% - 50px);
-	left: 54%;
-
 
 	p {
 		padding: 10px;
@@ -108,7 +89,6 @@ div#summary {
 
 div#clickToOpen {
 	text-align: center;
-	order: 1;
 	display: block;
 	width: 10%;
 
@@ -116,8 +96,50 @@ div#clickToOpen {
 
 div#summaryAndDate {
 		order: 2;
-		flex-grow: 2;
 		width: 89%;
+		height: auto;
 
 	}
+
+
+@media (max-width: 800px){
+	#picture, #video, div#summary, div#title, 
+	#summaryWrapper, div#title h1, div#title h2, 
+	div#summary #date, div#summaryAndDate {
+		position: static;
+		z-index: 1;
+		display: block;
+		width: 100%;
+		min-height: auto;
+		min-width: auto;
+		height: auto;
+		margin: 0px;
+		text-align: center;
+	}
+
+	div#clickToOpen {
+		display: none;
+	}
+
+	div#title br {
+		display: none;
+	}
+
+	div#title h2 {
+		font-size: 1.5em;
+		margin-top: -10px;
+	}
+
+	br.clear {
+		display: none;
+	}
+
+	div#summary {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+
+
+}
 

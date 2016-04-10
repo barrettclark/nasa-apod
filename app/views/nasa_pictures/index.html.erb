@@ -15,12 +15,16 @@
 		<% else %>
 		<img id="picture" src="<%= @nasa_info["url"] %>" />
 	<% end %>
+	<br class="clear">
 </div>
-<div id="summary">
-	<div id="clickToOpen">&lt;&lt;</div>
-	<div id="summaryAndDate">
-	<p><%= @nasa_info["explanation"] %></p>
-	<p id="date"><%= @nasa_info["date"] %></p>
+	<div id="summaryWrapper">
+		<div id="summary">
+			<div id="clickToOpen">&lt;&lt;</div>
+			<div id="summaryAndDate">
+			<p><%= @nasa_info["explanation"] %></p>
+			<p id="date"><%= @nasa_info["date"] %></p>
+			<br class="clear">
+			</div>
+		</div>
 	</div>
-</div>
 
