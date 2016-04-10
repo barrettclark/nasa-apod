@@ -1,3 +1,5 @@
+@import "normalize";
+
 body {
 	color: black;
 	background-color: black;
@@ -97,7 +99,7 @@ div#clickToOpen {
 div#summaryAndDate {
 		order: 2;
 		width: 89%;
-		height: auto;
+		height: auto; 
 
 	}
 
