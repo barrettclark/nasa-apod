@@ -1,6 +1,7 @@
 class NasaApodApi
 
-  def self.get_nasa_info(set_date=Date.today.to_s)
+  def self.get_nasa_info(set_date=Time.now.in_time_zone('US/Eastern').to_date
+.to_s)
     record = NasaMedium.where(:set_date => set_date).first
     unless record
       Rails.logger.debug "fetching #{set_date}"
