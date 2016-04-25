@@ -13,7 +13,7 @@
 	<% if @media_type_is_video %>
 		<iframe id="video" src="<%= @nasa_info["url"] %>"></iframe>
 		<% else %>
-		<img id="picture" src="<%= @nasa_info["url"] %>" />
+		<img id="picture" src="<%= @nasa_info["hdurl"] %>" />
 	<% end %>
 	<br class="clear">
 </div>
