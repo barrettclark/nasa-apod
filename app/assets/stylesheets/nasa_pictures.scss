@@ -105,7 +105,10 @@ div#clickToOpen {
 	text-align: center;
 	display: block;
 	width: 10%;
+}
 
+div#clickToOpen:hover, div#showInfo:hover {
+	cursor: pointer;
 }
 
 div#summaryAndDate {
